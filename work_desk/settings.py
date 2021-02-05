@@ -28,6 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = [
+    'localhost',
     '0.0.0.0',
     '192.168.1.148',
     '127.0.0.1',
@@ -59,10 +60,10 @@ INSTALLED_APPS = [
 ]
 
 REST_FRAMEWORK = {
-    # Response change to JSONRenderer style
-    'DEFAULT_RENDERER_CLASSES': (
-        'rest_framework.renderers.JSONRenderer',
-    ),
+    # # Response change to JSONRenderer style
+    # 'DEFAULT_RENDERER_CLASSES': (
+    #     'rest_framework.renderers.JSONRenderer',
+    # ),
     # Authentication Scheme
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.BasicAuthentication',

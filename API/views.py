@@ -42,14 +42,13 @@ def note_create(request):
      content and author(id). Rest is default (position_top, position_left,
      color) but user can change this value."""
 
-    try:
-        serializer = NoteSerializer(data=request.data)
+    user = request.user
+    note = Note.objects.create(author=user)
+    serializer = NoteSerializer(note)
 
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-    except Exception:
-        return Response("Something terrible went wrong. Can't create this note.")
+    return Response(serializer.data)
+    # except Exception:
+    #     return Response("Something terrible went wrong. Can't create this note.")
 
 
 @api_view(['POST'])
