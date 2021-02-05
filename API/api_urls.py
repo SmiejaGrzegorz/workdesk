@@ -3,9 +3,10 @@ from . import views
 
 
 urlpatterns = [
-    # registration
+    # Authentication
     path('', include('rest_auth.urls')),
     path('registration/', include('rest_auth.registration.urls')),
+    path('login/', include('djoser.urls.authtoken')),
     # url rest
     path('notes/', views.note_list, name='note_list'),
     path('users/', views.users_list, name='user_list'),

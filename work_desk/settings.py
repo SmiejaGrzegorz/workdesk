@@ -27,8 +27,11 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['heroku logs --tail']
-
+ALLOWED_HOSTS = [
+    '0.0.0.0',
+    '192.168.1.148',
+    '127.0.0.1',
+]
 
 # Application definition
 
@@ -43,8 +46,10 @@ INSTALLED_APPS = [
     # myapp
     'API',
     'rest_framework',
+    'corsheaders',
 
     # authentication
+    'djoser',
     'rest_framework.authtoken',
     'rest_auth',
     'django.contrib.sites',
@@ -76,6 +81,7 @@ SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -83,6 +89,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000', 'http://localhost:4200',)
 
 ROOT_URLCONF = 'work_desk.urls'
 
@@ -144,3 +153,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+# ]
+
+STATIC_ROOT = "/home/muczajonc/coding/django_projects/workdesk/work_desk/static"

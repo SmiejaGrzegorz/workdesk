@@ -10,6 +10,7 @@ python-decouple = "*"
 dj-database-url = "*"
 psycopg2-binary = "*"
 gunicorn = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 

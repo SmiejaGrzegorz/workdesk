@@ -1,0 +1,144 @@
+napisz funkcję generującą kolejne elementy ciągu Fibonacciego
+
+zamień wartości dwóch zmiennych
+
+co to jest i do czego służy type?
+
+czy parametry do funkcji są w pythonie przekazywanie przez wartość, czy referencję?
+
+jakie są podstawowe typy w pythonie?
+
+czy python jest językiem kompilowanym czy skryptowym? słabo czy silnie typowanym? co to jest duck-typing?
+
+do czego służą i czym się różnią metody:
+__init__ vs __new__
+__str__ vs __repr__
+__add__ vs __radd__
+
+czym się różni metoda od funkcji?
+
+co to jest self? czy self jest słowem kluczowym?
+
+co to jest słowo kluczowe (keyword)?
+
+co oznacza instrukcja pass? kiedy można jej użyć?
+
+co to są built-iny?
+
+jakie znasz sposoby na konkatenację stringów? których warto, a których nie warto używać i dlaczego?
+
+czym się różni list i dict?
+
+czym się różni set i list?
+
+co to jest list/dict comprehension?
+
+jak działa wielokrotne dziedziczenie w pythonie?
+
+co to jest mixin i kiedy warto go użyć?
+
+co to jest MTV?
+
+ile poleci zapytań do bazy w trakcie wykonywania funkcji:
+	def dashboard(request):
+		items = Item.objects.all()
+		return render(request, 'index.html')
+
+jak poradzić sobie z tłumaczeniem aplikacji napisanej w Django?
+
+pola jakiego typu użyjesz w modelu do przechowywania stanu konta użytkownika?
+
+co to jest manager w Django?
+
+co to jest context manager?
+
+czy kiedykolwiek miałeś sytuację, w której ORM cię ograniczał?
+
+co jest nie tak z poniższym kodem? Jak byś go poprawił?
+	items = Item.objects.all()
+	for item in items:
+		print(item.buyer.last_name)
+
+czym się różni select_related od prefetch_related?
+
+jakich narzędzi/paczek/aplikacji używasz pisząc aplikację w Django?
+
+co to jest middleware?
+
+co to jest model abstrakcyjny?
+
+co to jest model proxy?
+
+
+co to są migracje?
+
+co wyróżnia Django na tle innych (pythonowych) webowych frameworków/bibliotek?
+
+jakie bazy danych są oficjalnie wspierane przez Django?
+
+jaka jest aktualna wersja pythona i Django?
+
+czym się różni python 2 od pythona 3?
+
+co to jest moduł?
+
+co to jest wersja LTS Django?
+
+w jaki sposób (i po co) rozszerzyć bazową klasę User z Django?
+
+co to są szablony?
+
+opisz co się dzieje z zapytaniem HTTP w kontekście aplikacji napisanej w Django
+
+do czego służy django.db.transaction.atomic i jak można tego użyć?
+
+którą bazę danych wybierzesz pisząc aplikację w Django i dlaczego?
+
+co to jest, i jak Django pozwala zapobiec: XSS, clickjacking, SQL injection, CSRF?
+
+jak Django zarządza hasłami użytkowników?
+
+co to jest AnonymousUser?
+
+jak sprawdzisz, czy aktualnie zalogowany użytkownik jest superuserem?
+
+jak sprawdzisz czy dany użytkownik ma uprawnienie do wykonania danej akcji?
+
+jak w Django można nadać uprawnienia użytkownikowi?
+
+jak wyślesz użytkownikowi duży plik, który został wygenerowany na jego żądanie?
+
+jak można deployować aplikację napisaną w Django?
+
+co to jest Docker i jak może on pomóc w pisaniu aplikacji (niekoniecznie w Django)?
+
+w jaki sposób działa i na co pozwala panel administratora w Django?
+
+
+Python i ogolne:
+
+1 lub 2 proste zadania na rozgrzewke (cos naprawde prostego, pogrupowac elementy, cos pofiltrowac zadania na 5 minut max)
+pytania killer "Jak dziala slownik? " albo "Jak dziala tablica ?" :P
+lista z 10 milionami elementow:
+a) [{"klucz1": "wartosc1"}, {"klucz2": "wartosc2"}, ....]
+b) [("klucz1", "wartosc1"), ("klucz2", "wartosc2", ....)
+Co lepiej wybrac i dlaczego ? Co to jest ___slots___ ?
+dekotarory (z parametrem) + dekorowanie klas (po co do czego ?)
+programowanie funkcyjne ( co to ? + clousure )
+multiprocessing vs multithreading vs asyncio (co to programowanie asynchroniczne, GIL itp)
+SOLID
+
+
+Django/Web-Dev:
+
+zaprojektowanie Twittera/Facebooka/Youtube/....<wstaw dowolna="dowolna" web="web" aplikacje="aplikacje">
+(requirementy, architektura (model, schemat, deployment), dane , bottlenecki, technologie)
+SQL vs NoSQL - (generalnie i w obrebie NoSQL document vs key-value vs column, sharding itp itd)
+CAP theorem
+wedlug jakich kryteriow mozna podzielic API aplikacji monolitycznej na mikroserwisy - wady zalety doswiadczenia
+HTTP ( HTTP perssisten, cookieys itp itd) , HTTPS (SSL)
+Load Balancing, HA, Cacheowanie, DNS itp itd itp itd
+techniki uwierzytelniania w aplikacjach webowych
+Celery
+z baz danych Indexy co to po co jest ?
+'conection pool' co to po co ?
